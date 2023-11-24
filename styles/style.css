@@ -1,0 +1,113 @@
+
+@font-face {
+    font-family:'Coolvetica' ;
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff");
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Coolvetica";
+    letter-spacing: 3px;
+}
+.menu
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.container
+{
+    /*
+    width
+    height
+    */
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/bg.jpg');
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+.links
+{
+    display: flex;
+    column-gap: 15px;
+    /*row-gap column-gap gap*/
+}
+.socialMediaLinks
+{
+    display: flex;
+    column-gap: 25px;
+}
+/* li
+{
+    margin: 5px;
+} */
+/*
+justify-content
+align-items
+...
+*/
+/*
+author name
+authorName -->camelCase
+author-name-->kebab case
+AuthorName-->Pascal Case
+*/
+.authorName
+{
+    font-size: 60px;
+    font-weight: 800;
+}
+.authorDescription
+{
+    font-size: 30px;
+    font-weight: lighter;
+    color: #a7a5a5;
+}
+span
+{
+    border-bottom: 3px solid #60C392;
+}
+li
+{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+li>a:hover
+{
+    color: #60C392;
+    border-bottom: 3px solid #60C392;
+
+}
+
+.active
+{
+    border-bottom: 3px solid #60C392;   
+}
+.icon
+{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(129, 129, 130,0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.icon:hover
+{
+    background-color: #60C392;
+    cursor: help;
+}

@@ -1,0 +1,53 @@
+:root
+{
+--mainColor:#60C392;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Coolvetica' ;
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff");
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+}
+.header
+{
+    background-color: black;
+    color: white;
+    font-family: "Coolvetica";
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.navbarItem
+{
+    color: white;
+    font-size: 20px !important;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    column-gap: 13px;
+}
+.brandName
+{
+    font-size: 30px;
+}
+
+.navbar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-right:5px ;
+}
+.navbarItem>a{
+    color: white;
+    text-decoration: none;
+}
+.active
+{
+    border-bottom: 2px solid var(--mainColor);
+}

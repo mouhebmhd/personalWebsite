@@ -1,6 +1,15 @@
+@font-face {
+    font-family:'Coolvetica' ;
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff");
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+}
 :root
 {
---mainColor:#60C392;
+--mainColor:#18D36E;
+--mainTextColor:#FFF;
+font-family:'Coolvetica' ;
+--textSize1:30px;
+--textSize2:20px;
 }
 *
 {
@@ -8,15 +17,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-@font-face {
-    font-family:'Coolvetica' ;
-    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff");
-    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+body
+{
+    background-image: url("../assets/img/bg.jpg");
+    background-size: cover;
 }
 .header
 {
-    background-color: black;
-    color: white;
+    background-color: rgba(0, 0, 0,0.2);
+    color:var(--mainTextColor);
     font-family: "Coolvetica";
     display: flex;
     justify-content: space-between;
@@ -24,7 +33,7 @@
 }
 .navbarItem
 {
-    color: white;
+    color: var(--mainTextColor);
     font-size: 20px !important;
 }
 ul{
@@ -34,7 +43,7 @@ ul{
 }
 .brandName
 {
-    font-size: 30px;
+    font-size: var(--textSize1);
 }
 
 .navbar{
@@ -44,10 +53,208 @@ justify-content: center;
 margin-right:5px ;
 }
 .navbarItem>a{
-    color: white;
+    color: var(--mainTextColor);
     text-decoration: none;
 }
 .active
 {
     border-bottom: 2px solid var(--mainColor);
+}
+.container
+{
+    height: 92.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 0 0 ;
+}
+.contactContainer
+{
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+}
+.container
+{
+    color: var(--mainTextColor);
+}
+.contact{
+font-size:var(--textSize2);
+text-transform: uppercase;
+}
+.contactMe
+{
+    font-size:var(--textSize1);
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+.horizontalLine
+{
+    width: 80px;
+    height: 3px;
+    background-color: var(--mainColor);
+}
+.contactF
+{
+    display: flex;
+    align-items: baseline;
+    column-gap: 3px;
+}
+.adressContainer,
+.profileContainer,
+.emailContainer,
+.callContainer,.form
+{
+  display: flex;
+  column-gap: 7px;
+  padding: 15px;
+  background-color: rgba(168, 168, 168, 0.3);
+
+}
+.contactForm
+{
+    display: grid;
+    grid-template-areas: 
+    "adressContainer profileContainer"
+    "emailContainer callContainer"
+    "form form"
+    ;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 100px 100px 100px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    row-gap: 10px;
+    column-gap: 15px;
+}
+.adressContainer
+{
+grid-area: adressContainer;
+}
+.profileContainer
+{
+    grid-area: profileContainer;
+}
+.emailContainer
+{
+    grid-area: emailContainer;
+
+}
+.callContainer
+{
+grid-area: callContainer;
+}
+.form
+{
+    grid-area: form;
+}
+.icon
+{
+    width:40px;
+    height: 40px;
+    background-color: rgba(168, 168, 168, 0.7) ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.iconFa
+{
+    color: var(--mainColor);
+    font-size: 18px;
+}
+.adressDetails
+{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.addrTitle
+{
+    color: #b8b8b8;
+}
+.addrValue
+{
+    font-weight: lighter !important;
+}
+.SocialValue
+{
+    display: flex;
+    column-gap: 10px;
+}
+.form
+{
+    display: grid;
+    grid-template-areas: 
+    "yourName yourEmail"
+    "subject subject"
+    "message message"
+    ;
+    width: 100%;
+    height: fit-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 200px;
+    row-gap: 10px;
+    column-gap: 15px;
+}
+.yourEmail,.yourName,.subject,.message
+{
+    background-color: rgba(168, 168, 168, 0.3);
+    padding: 10px;
+}
+.yourEmail
+{
+    grid-area:yourEmail ;
+}
+.yourName
+{
+    grid-area: yourName;
+  
+}
+.subject
+{
+    grid-area:subject ;
+}
+.message
+{
+    grid-area:message ;
+}
+.textInput
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color:  rgba(168, 168, 168, 1);
+    font-size: 18px;
+    align-content: center;
+}
+.textInput::placeholder
+{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.textInput:focus
+{
+    border: none;
+    outline: none;
+}
+.sendMessage
+{
+    margin: auto;
+    width: 150px;
+    height: 40px;
+    padding: 3px;
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    border: none;
+}
+.message{
+    display: flex;
+    flex-direction: column;
 }

@@ -24,7 +24,7 @@ body
 }
 .header
 {
-    background-color: rgba(0, 0, 0,0.2);
+    background-color: rgba(0, 0, 0,0.3);
     color:var(--mainTextColor);
     font-family: "Coolvetica";
     display: flex;

@@ -1,0 +1,148 @@
+@font-face {
+    font-family:'Coolvetica' ;
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff");
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family: "Coolvetica";
+
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+   display: flex;
+}
+.signIn
+{
+height: 100%;
+width: 55%;
+}
+.helloMessage
+{
+    height: 100%;
+    background-color: #18D36E;
+    width: 45%;
+    border-top-left-radius:30% ;
+    border-bottom-left-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+   
+    
+}
+.helloTitle
+{
+    font-size: 50px;
+    color:white;
+}
+.helloParag
+{
+    font-size: 25px;
+    color: white;
+}
+.btnSignUp
+{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    background-color: #18D36E;
+    font-size: 20px;
+    border-radius: 10px;    
+}
+.btnSignUp:hover
+{
+    color: #18D36E;
+    background-color: white;
+}
+.signIn
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+input
+{
+    display: block;
+}
+.signInTitle
+{
+    font-size: 50px;
+}
+.iconsContainer
+{
+    display: flex;
+}
+.icon
+{
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #18D36E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+.fa-brands
+{
+    font-size: 20px;
+    color: #18D36E;
+}
+.signInMessage,.forgetPassMsg
+{
+    text-align: center;
+    color: gray;
+}
+input[type=email],input[type=password]
+{
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+input[type=email]:focus,input[type=password]:focus
+{
+    outline-color: #18D36E;
+}
+.submitButton
+{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    background-color: #18D36E;
+    font-size: 20px;
+    border-radius: 10px;   
+    text-transform: uppercase;
+}
+/* 
+flex-direction: row; * * * * 
+justify-content--> alignement horizontale 
+align-items-->alignement verticale 
+    */
+/*
+   flex-direction:column;   *
+                            *   
+                            *   
+                            *
+    justify-content -->alignement verticale
+    align-items -->alignement horizontale
+*/

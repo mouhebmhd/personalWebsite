@@ -1,0 +1,245 @@
+@font-face {
+    font-family:'Coolvetica' ;
+    src: url("../assets/fonts/coolvetica/coolvetica_compressed_hv-webfont.woff");
+    src: url("../assets/fonts/coolvetica/coolvetica_rg-webfont.woff2");
+}
+:root{
+    --blackColor:rgba(0,0,0,0.3);
+    --grayColor:rgb(205, 205, 205);
+    --greenColor:#18D36E;
+    --fontSize1:32px;
+    --fontSize2:25px;
+    --paragraphFont:20px;
+    --fontPrincipal:"Coolvetica";
+    --backgroundImage: url("../assets/img/bg.jpg");
+    --personalImage:url("../assets/img/me.jpg")
+}
+body{
+    background-image:var(--backgroundImage);
+    background-size: cover;
+    font-family: var(--fontPrincipal);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--fontPrincipal);
+}
+.navbar
+{
+background-color: var(--blackColor);
+color: var(--grayColor);
+display: flex;
+justify-content: space-between;
+padding: 10px;
+align-items: center;
+}
+
+    .navbarTitle
+    {
+        font-size: var(--fontSize1);
+        font-weight: bold;
+        font-family:var(--fontPrincipal);
+        color: white;
+    }
+    .menuItems
+    {
+        display: flex;
+        list-style: none;
+        column-gap: 15px;
+        
+    }
+        a
+        {
+            color: var(--grayColor);
+            text-decoration: none;
+            font-size:var(--paragraphFont);
+            padding: 3px;
+        }
+        .active
+        {
+            border-bottom: 2px solid var(--greenColor);
+            color: white ;
+        }
+.container
+{
+    width: 100%;
+    height: 92.2vh;
+   display: flex;
+   justify-content: center;
+   padding: 15px;
+   padding-bottom: 0;
+}
+    .content
+    {
+        width: 85%;
+        height: 100vh;
+        background-color:rgba(0,0,0,0.7);
+        padding: 10px;
+    }
+        .contentTitle
+        {
+            color: var(--grayColor);
+            text-transform: uppercase;
+        }
+            .about
+            {
+                font-size: var(--paragraphFont);
+                display: flex;
+                align-items: baseline;
+            }
+            .hrLine
+            {
+                width: 150px;
+                height: 3px;
+                background-color: var(--greenColor);
+                margin-left: 5px;
+            }
+            .aboutMe
+            {
+                font-size: var(--fontSize1);
+                margin-top: 10px;
+                color: #FFF;
+            }
+    .contentBody
+    {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas:
+        "personalImage personalInformations"
+        "dataBoxes dataBoxes"
+        ;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 3fr 1fr;
+        
+    }
+        .personalImage
+        {
+            grid-area: personalImage;
+            background-image: var(--personalImage);
+            background-size: cover;
+        }
+        .personalInformations
+        {
+            grid-area:personalInformations ;
+            color: var(--grayColor);
+            padding: 10px;
+        }
+            .personalInformations p:first-child
+            {
+                font-size: var(--fontSize2);
+                color: var(--greenColor);
+            }
+            .personalInformations p:nth-child(2)
+            {
+                margin-top: 10px;
+            }
+                .informations
+                {
+                    display: grid;
+                    grid-template-areas: 
+                    "birthday age"
+                    "website degree"
+                    "phone email"
+                    "city freelance"
+                    ;
+                    row-gap: 15px;
+                    margin-top: 10px;
+                }
+                .birthday
+                {
+                    grid-area: birthday;
+                }
+                .age{
+                    grid-area: age;
+                }
+                .website
+                {
+                    grid-area: website;
+                }
+                .degree
+                {
+                    grid-area: degree;
+                }
+                .phone
+                {
+                    grid-area: phone;
+                }
+                .email
+                {
+                    grid-area: email;
+                }
+                .city
+                {
+                    grid-area: city;
+                }
+                .freelance
+                {
+                    grid-area:freelance;
+                }
+                    .icon
+                    {
+                        color: var(--greenColor);
+                        font-size: var(--paragraphFont);
+                    }
+                    .desc
+                    {
+                        font-weight: bold;
+                        color: white;
+                        margin: 0 3px 0 3px;
+                        font-size: 18px;
+                    }
+            .personalInformations p:last-child
+            {
+            margin-top: 5px;
+            }
+        .dataBoxes
+        {
+            grid-area: dataBoxes;
+            display: grid;
+            grid-template-areas: 
+            "box1 box2 box3 box4";
+            grid-template-columns:1fr 1fr 1fr 1fr ;
+           column-gap: 5px;
+            
+        }
+            .box 
+            { 
+                background-color:rgba(255,255,255,0.1 );
+                padding: 10px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: fit-content;
+            }
+                .boxTitle
+                {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .boxIcon
+                {
+                    color: var(--greenColor);
+                    font-size: 25px;
+                    width: 40px;
+                   height: 40px;
+                   border-radius: 50%;
+                    background-color: rgba(255,255,255,0.2);
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                } 
+                .boxIcon
+                {
+                    position: relative;
+                    bottom: 25px; 
+                }
+                .boxDescription,.boxtitle
+                {
+                    position: relative;
+                    bottom: 10px;
+                }
